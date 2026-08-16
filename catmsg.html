@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Cats 🐱</title>
+
+<style>
+
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body {
+    font-family: "Poppins", sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffafa,
+            #fff0f4
+        );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================
+   MAIN
+===================================== */
+
+.birthday-cats {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+.cats-container {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   TITLE
+===================================== */
+
+.title {
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    color: #9b6875;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+    color: #aa9098;
+
+    font-size: 14px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =====================================
+   CATS AREA
+===================================== */
+
+.cats-area {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 360px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    padding: 0 30px;
+}
+
+
+/* =====================================
+   CAT
+===================================== */
+
+.cat-box {
+
+    position: relative;
+
+    width: 260px;
+
+    height: 300px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 2;
+}
+
+
+.cat {
+
+    width: 230px;
+
+    height: 230px;
+
+    object-fit: contain;
+
+    transition:
+        transform .5s ease;
+}
+
+
+/* Kucing kiri */
+
+.cat-one {
+    animation:
+        catFloat 3s ease-in-out infinite;
+}
+
+
+/* Kucing kanan */
+
+.cat-two {
+    animation:
+        catFloat 3s ease-in-out infinite;
+
+    animation-delay: .8s;
+}
+
+
+/* =====================================
+   CAT FLOAT
+===================================== */
+
+@keyframes catFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(-2deg);
+    }
+
+}
+
+
+/* =====================================
+   SPEECH BUBBLE
+===================================== */
+
+.speech {
+
+    position: absolute;
+
+    top: -20px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    width: 230px;
+
+    min-height: 75px;
+
+    padding: 16px 20px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(130, 80, 95, .13);
+
+    opacity: 0;
+
+    transition:
+        .5s cubic-bezier(.68,-0.55,.27,1.55);
+
+    z-index: 10;
+}
+
+
+/* Bubble aktif */
+
+.speech.show {
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        scale(1);
+
+}
+
+
+/* =====================================
+   BUBBLE TAIL
+===================================== */
+
+.speech::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -12px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 0;
+    height: 0;
+
+    border-left: 13px solid transparent;
+
+    border-right: 13px solid transparent;
+
+    border-top: 15px solid white;
+}
+
+
+/* =====================================
+   TEXT BUBBLE
+===================================== */
+
+.speech-text {
+
+    color: #765b65;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================
+   HEART
+===================================== */
+
+.floating-heart {
+
+    position: absolute;
+
+    color: #e9a0b1;
+
+    font-size: 22px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.heart-1 {
+    top: 20%;
+    left: 45%;
+}
+
+
+.heart-2 {
+    top: 30%;
+    left: 52%;
+}
+
+
+.heart-3 {
+    top: 40%;
+    left: 48%;
+}
+
+
+/* =====================================
+   HEART ANIMATION
+===================================== */
+
+.heart-animation {
+
+    animation:
+        heartFly 2s ease-out forwards;
+
+}
+
+
+@keyframes heartFly {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(.5);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--moveX),
+                -100px
+            )
+            scale(1.3);
+    }
+
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.start-button {
+
+    margin-top: 20px;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7a0b0,
+            #d98297
+        );
+
+    color: white;
+
+    padding:
+        14px 28px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(190, 100, 125, .25);
+
+    transition: .3s;
+}
+
+
+.start-button:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+}
+
+
+.start-button:active {
+
+    transform:
+        scale(.95);
+
+}
+
+
+/* =====================================
+   FINAL MESSAGE
+===================================== */
+
+.final-message {
+
+    margin-top: 25px;
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .8s ease;
+}
+
+
+.final-message.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.final-message h2 {
+
+    font-family: Georgia, serif;
+
+    color: #9b6875;
+
+    font-size: 25px;
+
+}
+
+
+.final-message p {
+
+    color: #a58d95;
+
+    font-size: 13px;
+
+    margin-top: 7px;
+
+}
+/* =====================================
+   BACK HOME BUTTON
+===================================== */
+
+.back-home-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    padding: 13px 25px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7a0b0,
+            #d98297
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(190, 100, 125, .22);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(15px);
+
+    pointer-events: none;
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        visibility .7s ease,
+        box-shadow .3s ease;
+}
+
+
+/* Muncul setelah semua pesan selesai */
+
+.back-home-btn.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+
+    pointer-events: auto;
+}
+
+
+.back-home-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(190, 100, 125, .3);
+}
+
+
+.back-home-btn:active {
+
+    transform:
+        scale(.95);
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+
+    .cats-area {
+
+        height: 330px;
+
+        padding:
+            0 0;
+    }
+
+
+    .cat-box {
+
+        width: 48%;
+
+        height: 260px;
+    }
+
+
+    .cat {
+
+        width: 150px;
+
+        height: 150px;
+    }
+
+
+    .speech {
+
+        width: 170px;
+
+        min-height: 65px;
+
+        padding:
+            12px 15px;
+    }
+
+
+    .speech-text {
+
+        font-size: 14px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<section class="birthday-cats">
+
+    <div class="cats-container">
+
+
+        <!-- TITLE -->
+
+        <h1 class="title">
+            A Little Birthday Message 🐱
+        </h1>
+
+        <p class="subtitle">
+            Acin dan Bocah ingin mengucapkan sesuatu buat kamu. Klik tombol di bawah untuk mendengarkan pesan mereka!
+        </p>
+
+
+        <!-- =================================
+             CATS
+        ================================== -->
+
+        <div class="cats-area">
+
+
+            <!-- KUCING 1 -->
+
+            <div class="cat-box">
+
+                <div
+                    class="speech"
+                    id="speech1"
+                >
+                    <span
+                        class="speech-text"
+                        id="text1"
+                    ></span>
+                </div>
+
+
+                <img
+                    src="acin.png"
+                    class="cat cat-one"
+                    alt="Kucing putih"
+                >
+
+            </div>
+
+
+
+            <!-- KUCING 2 -->
+
+            <div class="cat-box">
+
+                <div
+                    class="speech"
+                    id="speech2"
+                >
+                    <span
+                        class="speech-text"
+                        id="text2"
+                    ></span>
+                </div>
+
+
+                <img
+                    src="ocah.png"
+                    class="cat cat-two"
+                    alt="Kucing abu"
+                >
+
+            </div>
+
+
+            <!-- HEART -->
+
+            <div
+                class="floating-heart heart-1"
+            >
+                ♥
+            </div>
+
+            <div
+                class="floating-heart heart-2"
+            >
+                ♡
+            </div>
+
+            <div
+                class="floating-heart heart-3"
+            >
+                ♥
+            </div>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <button
+            class="start-button"
+            id="startButton"
+            onclick="startBirthday()"
+        >
+            💌 Dengarkan pesan mereka
+        </button>
+
+
+        <!-- FINAL -->
+
+        <div
+            class="final-message"
+            id="finalMessage"
+        >
+
+            <h2>
+                Happy Birthday, Sayang! 🎂🤍
+            </h2>
+
+            <p>
+                Semoga hari ini menjadi salah satu
+                hari yang paling indah buat kamu.
+            </p>
+
+        </div>
+        <a
+    href="index.html"
+    class="back-home-btn"
+    id="backHomeButton"
+>
+    ← Kembali ke halaman utama
+</a>
+
+
+    </div>
+
+</section>
+<script>
+
+/* =====================================
+   PESAN KUCING
+===================================== */
+
+const messages = [
+
+    {
+        cat: 1,
+        text: "Happy Birthday! 🎂"
+    },
+
+    {
+        cat: 2,
+        text: "Selamat ulang tahun Ya 🤍"
+    },
+
+    {
+        cat: 1,
+        text: "Semoga kamu selalu bahagia ✨"
+    },
+
+    {
+        cat: 2,
+        text: "Semoga semua impian kamu tercapai 💕"
+    },
+
+    {
+        cat: 1,
+        text: "Semoga kamu selalu diberikan kesehatan 💗"
+    },
+
+    {
+        cat: 2,
+        text: "Jangan lupa untuk terus tersenyum ya"
+    }
+
+];
+
+
+let currentMessage = 0;
+
+
+/* =====================================
+   START
+===================================== */
+
+function startBirthday() {
+
+    const button =
+        document.getElementById(
+            "startButton"
+        );
+
+    button.disabled = true;
+
+    button.innerHTML =
+        "💗 Mereka sedang berbicara...";
+
+
+    showNextMessage();
+
+}
+
+
+/* =====================================
+   NEXT MESSAGE
+===================================== */
+
+function showNextMessage() {
+
+    /* Jika semua pesan selesai */
+
+    if (
+        currentMessage >=
+        messages.length
+    ) {
+
+        finishAnimation();
+
+        return;
+    }
+
+
+    const message =
+        messages[currentMessage];
+
+
+    const speech =
+        document.getElementById(
+            "speech" + message.cat
+        );
+
+
+    const text =
+        document.getElementById(
+            "text" + message.cat
+        );
+
+
+    /* Sembunyikan semua bubble */
+
+    document
+        .querySelectorAll(".speech")
+        .forEach(function(item) {
+
+            item.classList.remove("show");
+
+        });
+
+
+    /* Bersihkan text */
+
+    text.innerHTML = "";
+
+
+    /* Tampilkan bubble */
+
+    setTimeout(function() {
+
+        speech.classList.add("show");
+
+        typeText(
+            text,
+            message.text
+        );
+
+    }, 300);
+
+
+    /* Hati */
+
+    createHeart();
+
+
+    currentMessage++;
+
+
+    /* Lanjut pesan berikutnya */
+
+    setTimeout(
+        showNextMessage,
+        3000
+    );
+
+}
+
+
+/* =====================================
+   TYPING EFFECT
+===================================== */
+
+function typeText(
+    element,
+    text
+) {
+
+    let index = 0;
+
+
+    const typing =
+        setInterval(function() {
+
+            element.innerHTML +=
+                text[index];
+
+            index++;
+
+
+            if (
+                index >=
+                text.length
+            ) {
+
+                clearInterval(typing);
+
+            }
+
+        }, 45);
+
+}
+
+
+/* =====================================
+   HEART
+===================================== */
+
+function createHeart() {
+
+    const hearts =
+        document.querySelectorAll(
+            ".floating-heart"
+        );
+
+
+    const random =
+        hearts[
+            Math.floor(
+                Math.random() *
+                hearts.length
+            )
+        ];
+
+
+    random.style.setProperty(
+        "--moveX",
+        (
+            Math.random() * 120 - 60
+        ) + "px"
+    );
+
+
+    random.classList.remove(
+        "heart-animation"
+    );
+
+
+    /* restart animation */
+
+    void random.offsetWidth;
+
+
+    random.classList.add(
+        "heart-animation"
+    );
+
+}
+
+
+/* =====================================
+   FINISH
+===================================== */
+
+function finishAnimation() {
+
+    const button =
+        document.getElementById(
+            "startButton"
+        );
+
+
+    const finalMessage =
+        document.getElementById(
+            "finalMessage"
+        );
+
+
+    const backHomeButton =
+        document.getElementById(
+            "backHomeButton"
+        );
+
+
+    button.innerHTML =
+        "🎂 Happy Birthday!";
+
+
+    finalMessage.classList.add(
+        "show"
+    );
+
+
+    /* Tampilkan tombol setelah pesan selesai */
+
+    setTimeout(function() {
+
+        backHomeButton.classList.add(
+            "show"
+        );
+
+    }, 800);
+
+}
+</script>
+
+</body>
+</html>
