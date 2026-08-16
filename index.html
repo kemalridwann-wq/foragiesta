@@ -1,0 +1,4366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="theme-color" content="#f8f3ef">
+<meta name="color-scheme" content="light">
+
+<title>For You, My Love ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+    background:#f8f3ef;
+}
+
+body{
+    position:relative;
+    min-height:100vh;
+    background:#f8f3ef;
+    color:#3b2929;
+    font-family:"Montserrat",sans-serif;
+    overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
+    text-rendering:optimizeLegibility;
+}
+
+img{
+    max-width:100%;
+}
+
+button{
+    font:inherit;
+}
+
+section{
+    contain:layout style;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(201,139,139,.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(137,83,83,.08),
+            transparent 30%
+        ),
+        #f8f3ef;
+}
+
+
+/* =========================================================
+   FLOATING HEART CANVAS
+========================================================= */
+
+#heartCanvas{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+    z-index:1;
+
+    min-height:100svh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px 20px;
+}
+
+.hero-content{
+    width:100%;
+    max-width:760px;
+
+    animation:fadeUp 1s ease both;
+}
+
+.small-text{
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#9a6767;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(58px,10vw,100px);
+
+    font-weight:500;
+
+    line-height:.82;
+
+    color:#512f2f;
+
+    margin-bottom:26px;
+
+    letter-spacing:-1.5px;
+}
+
+.hero h1 span{
+    display:block;
+}
+
+.hero-happy{
+    font-size:.72em;
+    font-weight:500;
+    letter-spacing:7px;
+
+    text-transform:uppercase;
+
+    color:#8f6262!important;
+
+    font-style:normal!important;
+
+    margin-left:6px;
+    margin-bottom:4px;
+}
+
+.hero-birthday{
+    font-size:1em;
+
+    font-weight:500;
+
+    color:#512f2f!important;
+
+    font-style:italic!important;
+}
+
+.hero-name{
+    margin-top:14px;
+
+    font-family:"Montserrat",sans-serif;
+
+    font-size:clamp(12px,2vw,16px);
+
+    font-weight:500;
+
+    letter-spacing:5px;
+
+    line-height:1.6;
+
+    text-transform:uppercase;
+
+    color:#9b6868!important;
+
+    font-style:normal!important;
+}
+
+.hero-divider{
+    width:100px;
+    height:1px;
+
+    margin:0 auto 24px;
+
+    background:rgba(155,92,92,.28);
+
+    position:relative;
+}
+
+.hero-divider span{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:#f8f3ef;
+
+    padding:0 10px;
+
+    color:#a76c6c;
+
+    font-size:13px;
+}
+
+.hero-description{
+    max-width:520px;
+
+    margin:auto;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    color:#745e5e;
+
+    font-weight:300;
+}
+
+.scroll-hint{
+    margin-top:42px;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#a77c7c;
+
+    animation:softPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BIRTHDAY
+========================================================= */
+
+.birthday-section{
+    position:relative;
+    z-index:1;
+
+    width:100%;
+
+    padding:80px 20px 70px;
+
+    text-align:center;
+}
+
+.cake-container{
+    width:100%;
+    max-width:600px;
+
+    margin:0 auto 90px;
+}
+
+.cake-container h2,
+.scratch-section h2{
+    font-family:"Cormorant Garamond",serif;
+
+    font-weight:500;
+
+    font-size:32px;
+
+    color:#512f2f;
+
+    margin-bottom:8px;
+}
+
+.cake-container p,
+.scratch-section>p{
+    color:#8d6c72;
+
+    font-size:14px;
+}
+
+.cake{
+    position:relative;
+
+    width:280px;
+    height:230px;
+
+    margin:60px auto 20px;
+}
+
+.cake-bottom,
+.cake-middle,
+.cake-top{
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:15px 15px 10px 10px;
+}
+
+.cake-bottom{
+    bottom:0;
+
+    width:280px;
+    height:80px;
+
+    background:#d88c9a;
+}
+
+.cake-middle{
+    bottom:65px;
+
+    width:240px;
+    height:70px;
+
+    background:#efb1ba;
+}
+
+.cake-top{
+    bottom:120px;
+
+    width:200px;
+    height:65px;
+
+    background:#f8d4d9;
+}
+
+.cake-top::before,
+.cake-middle::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:15px;
+
+    background:#fff8f8;
+
+    border-radius:50%;
+}
+
+.candles{
+    position:absolute;
+
+    z-index:5;
+
+    top:5px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:25px;
+}
+
+.candle{
+    position:relative;
+
+    width:20px;
+    height:80px;
+
+    cursor:pointer;
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+.candle-stick{
+    position:absolute;
+
+    bottom:0;
+
+    width:20px;
+    height:60px;
+
+    border-radius:5px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #fff,
+            #fff 6px,
+            #e99ba8 6px,
+            #e99ba8 12px
+        );
+}
+
+.flame{
+    position:absolute;
+
+    left:50%;
+    top:-5px;
+
+    transform:translateX(-50%);
+
+    width:18px;
+    height:28px;
+
+    background:#ffb347;
+
+    border-radius:50%;
+
+    box-shadow:0 0 12px #ffb347;
+
+    animation:flicker .7s infinite alternate;
+
+    cursor:pointer;
+}
+
+.candle.blown .flame{
+    display:none;
+}
+
+.cake-message{
+    min-height:30px;
+
+    font-family:Georgia,serif;
+
+    font-size:18px!important;
+
+    color:#a75b68!important;
+}
+
+
+/* =========================================================
+   SCRATCH CARD
+========================================================= */
+
+.scratch-section{
+    width:100%;
+    max-width:600px;
+
+    margin:auto;
+}
+
+.scratch-card{
+    position:relative;
+
+    width:320px;
+    height:200px;
+
+    margin:35px auto 15px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 30px rgba(100,50,60,.12);
+
+    contain:strict;
+}
+
+.hidden-message{
+    position:absolute;
+
+    inset:0;
+
+    background:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+}
+
+.hidden-message span{
+    font-size:25px;
+}
+
+.hidden-message h3{
+    margin:5px 0;
+
+    font-family:Georgia,serif;
+
+    font-size:25px;
+
+    color:#a75b68;
+}
+
+.hidden-message p{
+    margin:5px 0;
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    color:#76565c;
+}
+
+#scratchCanvas{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    cursor:crosshair;
+
+    touch-action:none;
+}
+
+.scratch-hint{
+    font-size:13px!important;
+
+    color:#a75b68!important;
+}
+
+
+/* =========================================================
+   GAME
+========================================================= */
+
+.game-wrapper{
+    width:100%;
+    max-width:430px;
+
+    margin:75px auto 0;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.game-card{
+    width:100%;
+
+    background:#fffafc;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    border-radius:30px;
+
+    padding:25px 18px 20px;
+
+    box-shadow:
+        0 12px 35px rgba(160,100,130,.12);
+}
+
+.title{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:32px;
+
+    color:#b85c7b;
+
+    margin-bottom:5px;
+}
+
+.subtitle{
+    font-size:13px;
+
+    color:#967080;
+
+    margin-bottom:18px;
+}
+
+.score-area{
+    display:flex;
+
+    justify-content:space-between;
+
+    background:#fff7fa;
+
+    border-radius:18px;
+
+    padding:12px 18px;
+
+    margin-bottom:15px;
+
+    font-size:14px;
+}
+
+.score-area strong{
+    color:#c65378;
+}
+
+#gameArea{
+    position:relative;
+
+    width:100%;
+    height:470px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.9),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,220,235,.65),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #fff8fb,
+            #fcecf3
+        );
+
+    border:1px solid rgba(220,160,180,.2);
+
+    contain:strict;
+}
+
+.heart{
+    position:absolute;
+
+    cursor:pointer;
+
+    user-select:none;
+    -webkit-user-select:none;
+
+    font-size:38px;
+
+    animation:
+        appear .22s ease-out,
+        float 1.8s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 4px 5px rgba(180,70,110,.18)
+        );
+
+    z-index:5;
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+.heart:active{
+    transform:scale(.75);
+}
+
+.particle{
+    position:absolute;
+
+    pointer-events:none;
+
+    font-size:18px;
+
+    animation:
+        particle .7s ease-out forwards;
+
+    z-index:10;
+}
+
+.start-screen,
+.result{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    text-align:center;
+}
+
+.start-screen{
+    background:rgba(255,248,251,.97);
+
+    z-index:20;
+}
+
+.start-heart,
+.result .big-heart{
+    font-size:70px;
+
+    animation:heartbeat 1.2s infinite;
+
+    margin-bottom:15px;
+}
+
+.start-screen h2,
+.result h2{
+    font-family:Georgia,serif;
+
+    color:#b85c7b;
+
+    margin-bottom:8px;
+}
+
+.start-screen p,
+.result p{
+    font-size:13px;
+
+    line-height:1.7;
+
+    color:#876a77;
+
+    margin-bottom:20px;
+}
+
+button{
+    border:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d76b8c,
+            #bd5577
+        );
+
+    color:#fff;
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 7px 17px rgba(190,80,120,.2);
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+.success-message{
+    margin-top:10px;
+
+    font-size:12px;
+
+    color:#b45a77;
+}
+
+.result{
+    background:rgba(255,248,251,.98);
+
+    z-index:30;
+
+    display:none;
+}
+
+.result.show{
+    display:flex;
+}
+
+.result h2{
+    color:#b84f73;
+
+    margin-bottom:12px;
+}
+
+.result p{
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#755c68;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter-section{
+    position:relative;
+    z-index:1;
+
+    min-height:100svh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:80px 20px;
+}
+
+.letter-container{
+    width:100%;
+
+    max-width:750px;
+}
+
+.envelope-wrapper{
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:50px;
+}
+
+.envelope{
+    width:280px;
+    height:180px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:transform .4s ease;
+}
+
+.envelope:hover{
+    transform:translateY(-5px);
+}
+
+.envelope-body{
+    position:absolute;
+
+    inset:0;
+
+    background:#d8a8a8;
+
+    border-radius:5px;
+
+    box-shadow:
+        0 15px 35px rgba(92,47,47,.12);
+}
+
+.envelope-body::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    border-left:140px solid transparent;
+    border-right:140px solid transparent;
+    border-bottom:100px solid #c99292;
+
+    z-index:2;
+}
+
+.envelope-body::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    border-left:140px solid transparent;
+    border-right:140px solid transparent;
+    border-top:100px solid #e5bcbc;
+
+    transform-origin:top;
+
+    transition:
+        transform .65s ease;
+
+    z-index:4;
+}
+
+.envelope.open .envelope-body::after{
+    transform:rotateX(180deg);
+
+    z-index:1;
+}
+
+.seal{
+    position:absolute;
+
+    width:42px;
+    height:42px;
+
+    background:#8d4e4e;
+
+    border-radius:50%;
+
+    left:50%;
+    top:52%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:18px;
+
+    z-index:5;
+
+    box-shadow:
+        0 4px 12px rgba(74,35,35,.15);
+
+    transition:opacity .3s ease;
+}
+
+.envelope.open .seal{
+    opacity:0;
+}
+
+.letter{
+    background:#fffdfa;
+
+    padding:clamp(30px,7vw,75px);
+
+    border:1px solid rgba(145,92,92,.15);
+
+    box-shadow:
+        0 20px 55px rgba(76,43,43,.08);
+
+    position:relative;
+
+    display:none;
+
+    animation:
+        letterOpen .8s ease forwards;
+}
+
+.letter.show{
+    display:block;
+}
+
+.letter::before{
+    content:"♥";
+
+    position:absolute;
+
+    top:25px;
+    right:30px;
+
+    font-size:20px;
+
+    color:#b47777;
+}
+
+.letter-date{
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    color:#a67a7a;
+
+    text-transform:uppercase;
+
+    margin-bottom:35px;
+}
+
+.letter h2{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(38px,7vw,60px);
+
+    font-weight:500;
+
+    line-height:1;
+
+    color:#512f2f;
+
+    margin-bottom:35px;
+}
+
+.letter h2 span{
+    font-style:italic;
+
+    color:#9b5c5c;
+}
+
+.letter-text{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:22px;
+
+    line-height:1.7;
+
+    color:#543f3f;
+}
+
+.letter-text p{
+    margin-bottom:22px;
+}
+
+.signature{
+    margin-top:45px;
+
+    text-align:right;
+}
+
+.signature-text{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:30px;
+
+    font-style:italic;
+
+    color:#8d4e4e;
+}
+
+.signature-small{
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:#a58282;
+
+    margin-top:5px;
+}
+
+
+/* =========================================================
+   CAT SURPRISE
+========================================================= */
+
+.cat-surprise{
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+    max-width:900px;
+
+    height:650px;
+
+    margin:0 auto;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+}
+
+.surprise-text{
+    position:absolute;
+
+    top:35px;
+    left:0;
+    right:0;
+
+    text-align:center;
+
+    z-index:50;
+
+    pointer-events:none;
+}
+
+.surprise-text h2{
+    margin:0;
+
+    color:#7c5261;
+
+    font-size:30px;
+
+    font-weight:600;
+}
+
+.surprise-text p{
+    margin-top:8px;
+
+    color:#aa7888;
+
+    font-size:14px;
+}
+
+.surprise-cats{
+    position:absolute;
+
+    left:50%;
+    bottom:115px;
+
+    width:min(620px,100%);
+    height:430px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    z-index:10;
+
+    pointer-events:none;
+}
+
+.surprise-cat{
+    position:absolute;
+
+    bottom:0;
+
+    width:48%;
+    height:100%;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    opacity:0;
+
+    transform:
+        translateY(280px)
+        scale(.92);
+
+    will-change:transform,opacity;
+}
+
+.surprise-cat img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:contain;
+
+    pointer-events:none;
+
+    user-select:none;
+}
+
+.surprise-cat-left{
+    left:0;
+
+    transform:
+        translateY(280px)
+        rotate(-5deg)
+        scale(.92);
+}
+
+.surprise-cat-right{
+    right:0;
+
+    transform:
+        translateY(280px)
+        rotate(5deg)
+        scale(.92);
+}
+
+.cat-surprise.opened .surprise-cat{
+    opacity:1;
+}
+
+.cat-surprise.opened .surprise-cat-left{
+    animation:
+        catLeftComeOut 1.2s cubic-bezier(.2,.8,.2,1) forwards,
+        catLeftDance 3.5s ease-in-out 1.2s infinite;
+}
+
+.cat-surprise.opened .surprise-cat-right{
+    animation:
+        catRightComeOut 1.2s cubic-bezier(.2,.8,.2,1) forwards,
+        catRightDance 3.5s ease-in-out 1.2s infinite;
+}
+
+.gift-box{
+    position:absolute;
+
+    left:50%;
+    bottom:45px;
+
+    width:220px;
+    height:170px;
+
+    transform:translateX(-50%);
+
+    cursor:pointer;
+
+    z-index:30;
+}
+
+.gift-body{
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:125px;
+
+    border-radius:8px 8px 15px 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f58da8,
+            #ed7696
+        );
+
+    box-shadow:
+        0 12px 25px rgba(150,70,90,.16);
+}
+
+.gift-ribbon{
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    width:30px;
+    height:100%;
+
+    transform:translateX(-50%);
+
+    background:#ffd76f;
+}
+
+.gift-lid{
+    position:absolute;
+
+    left:-8px;
+    top:35px;
+
+    width:236px;
+    height:42px;
+
+    border-radius:8px;
+
+    background:#f0809f;
+
+    z-index:5;
+
+    transform-origin:left bottom;
+
+    transition:
+        transform .8s cubic-bezier(.2,.8,.2,1),
+        top .8s ease;
+}
+
+.gift-lid::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    width:30px;
+    height:100%;
+
+    transform:translateX(-50%);
+
+    background:#ffd76f;
+}
+
+.gift-bow{
+    position:absolute;
+
+    top:8px;
+    left:50%;
+
+    width:70px;
+    height:55px;
+
+    transform:translateX(-50%);
+
+    z-index:15;
+
+    transition:.8s ease;
+}
+
+.bow-left,
+.bow-right{
+    position:absolute;
+
+    top:5px;
+
+    width:38px;
+    height:38px;
+
+    background:#ffd76f;
+}
+
+.bow-left{
+    left:0;
+
+    border-radius:
+        50% 50% 10% 50%;
+
+    transform:rotate(30deg);
+}
+
+.bow-right{
+    right:0;
+
+    border-radius:
+        50% 50% 50% 10%;
+
+    transform:rotate(-30deg);
+}
+
+.bow-center{
+    position:absolute;
+
+    left:50%;
+    top:17px;
+
+    width:22px;
+    height:22px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:#f3c85e;
+}
+
+.cat-surprise.opened .gift-lid{
+    top:-18px;
+
+    transform:
+        rotate(-4deg)
+        translate(-6px,-18px);
+}
+
+.cat-surprise.opened .gift-bow{
+    transform:
+        translateX(-50%)
+        translateY(-55px)
+        rotate(-8deg);
+}
+
+.gift-hint{
+    position:absolute;
+
+    left:50%;
+    bottom:-30px;
+
+    transform:translateX(-50%);
+
+    color:#9a6575;
+
+    font-size:13px;
+
+    white-space:nowrap;
+
+    animation:
+        hintPulse 1.5s ease-in-out infinite;
+}
+
+.cat-surprise.opened .gift-hint{
+    opacity:0;
+}
+
+.surprise-hearts{
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:25;
+}
+
+.surprise-hearts span{
+    position:absolute;
+
+    left:50%;
+    bottom:140px;
+
+    font-size:22px;
+
+    opacity:0;
+}
+
+.cat-surprise.opened .surprise-hearts span{
+    animation:
+        heartUp 2.2s ease-out forwards;
+}
+
+.surprise-hearts span:nth-child(1){
+    --x:-230px;
+    --y:-240px;
+    animation-delay:.1s;
+}
+
+.surprise-hearts span:nth-child(2){
+    --x:-150px;
+    --y:-320px;
+    animation-delay:.3s;
+}
+
+.surprise-hearts span:nth-child(3){
+    --x:160px;
+    --y:-290px;
+    animation-delay:.5s;
+}
+
+.surprise-hearts span:nth-child(4){
+    --x:240px;
+    --y:-210px;
+    animation-delay:.7s;
+}
+
+.surprise-hearts span:nth-child(5){
+    --x:20px;
+    --y:-350px;
+    animation-delay:.9s;
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.memories{
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+    max-width:1000px;
+
+    margin:0 auto;
+
+    padding:100px 20px;
+
+    content-visibility:auto;
+
+    contain-intrinsic-size:
+        1000px 1200px;
+}
+
+.section-title{
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.section-title small{
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:10px;
+
+    color:#a26d6d;
+}
+
+.section-title h2{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:55px;
+
+    font-weight:500;
+
+    color:#512f2f;
+
+    margin-top:10px;
+}
+
+.photos{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.photo{
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+    background:#eadada;
+
+    border-radius:2px;
+
+    contain:paint;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .5s ease;
+}
+
+.photo:hover img{
+    transform:scale(1.04);
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    min-height:80svh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    content-visibility:auto;
+
+    contain-intrinsic-size:
+        700px 600px;
+}
+
+.final-content{
+    width:100%;
+
+    max-width:700px;
+}
+
+.final-heart{
+    font-size:40px;
+
+    color:#9b5c5c;
+
+    animation:
+        heartbeat 1.8s infinite;
+
+    margin-bottom:25px;
+}
+
+.final h2{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(45px,8vw,75px);
+
+    font-weight:500;
+
+    color:#512f2f;
+
+    line-height:1;
+}
+
+.final p{
+    margin-top:25px;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    color:#806969;
+}
+
+.footer{
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    padding:30px;
+
+    text-align:center;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:#ad9191;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(24px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes letterOpen{
+    from{
+        opacity:0;
+        transform:
+            translateY(25px)
+            scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes heartbeat{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+@keyframes flicker{
+    from{
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+
+    to{
+        transform:
+            translateX(-50%)
+            scale(1.12);
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:scale(.4);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+}
+
+@keyframes particle{
+    0%{
+        opacity:1;
+
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translate(var(--x),var(--y))
+            scale(.3);
+    }
+}
+
+@keyframes softPulse{
+    0%,100%{
+        opacity:.5;
+    }
+
+    50%{
+        opacity:1;
+    }
+}
+
+@keyframes hintPulse{
+    0%,100%{
+        opacity:.5;
+    }
+
+    50%{
+        opacity:1;
+    }
+}
+
+@keyframes catLeftComeOut{
+    0%{
+        transform:
+            translateY(280px)
+            rotate(-5deg)
+            scale(.92);
+
+        opacity:0;
+    }
+
+    45%{
+        opacity:1;
+    }
+
+    75%{
+        transform:
+            translateY(-10px)
+            rotate(2deg)
+            scale(1.02);
+    }
+
+    100%{
+        transform:
+            translateY(0)
+            rotate(-3deg)
+            scale(1);
+    }
+}
+
+@keyframes catRightComeOut{
+    0%{
+        transform:
+            translateY(280px)
+            rotate(5deg)
+            scale(.92);
+
+        opacity:0;
+    }
+
+    45%{
+        opacity:1;
+    }
+
+    75%{
+        transform:
+            translateY(-10px)
+            rotate(-2deg)
+            scale(1.02);
+    }
+
+    100%{
+        transform:
+            translateY(0)
+            rotate(3deg)
+            scale(1);
+    }
+}
+
+@keyframes catLeftDance{
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50%{
+        transform:
+            translateY(-6px)
+            rotate(2deg);
+    }
+}
+
+@keyframes catRightDance{
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(3deg);
+    }
+
+    50%{
+        transform:
+            translateY(-6px)
+            rotate(-2deg);
+    }
+}
+
+@keyframes heartUp{
+    0%{
+        opacity:0;
+
+        transform:
+            translate(-50%,0)
+            scale(.3);
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                var(--y)
+            )
+            scale(1.2);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .hero{
+        min-height:92svh;
+
+        padding:
+            30px 18px;
+    }
+
+    .small-text{
+        font-size:9px;
+
+        letter-spacing:3px;
+
+        margin-bottom:20px;
+    }
+
+    .hero h1{
+        font-size:
+            clamp(
+                58px,
+                17vw,
+                72px
+            );
+
+        line-height:.88;
+    }
+
+    .hero-happy{
+        font-size:.62em;
+
+        letter-spacing:5px;
+
+        margin-bottom:5px;
+    }
+
+    .hero-name{
+        margin-top:13px;
+
+        font-size:11px;
+
+        letter-spacing:3px;
+
+        line-height:1.7;
+
+        padding:0 8px;
+    }
+
+    .hero-divider{
+        width:82px;
+
+        margin-bottom:22px;
+    }
+
+    .hero-description{
+        max-width:350px;
+
+        font-size:12.5px;
+
+        line-height:1.9;
+
+        padding:0 12px;
+    }
+
+    .scroll-hint{
+        margin-top:32px;
+    }
+
+
+    .birthday-section{
+        padding:60px 15px;
+    }
+
+    .cake-container{
+        margin-bottom:70px;
+    }
+
+    .cake-container h2,
+    .scratch-section h2{
+        font-size:26px;
+
+        line-height:1.3;
+    }
+
+    .cake-container p,
+    .scratch-section>p{
+        font-size:13px;
+    }
+
+    .cake{
+        transform:scale(.82);
+
+        margin-top:35px;
+
+        margin-bottom:0;
+    }
+
+    .scratch-card{
+        width:min(290px,100%);
+
+        height:180px;
+    }
+
+
+    .game-wrapper{
+        max-width:100%;
+
+        margin-top:50px;
+
+        padding:15px;
+    }
+
+    .game-card{
+        padding:
+            22px 14px 18px;
+
+        border-radius:24px;
+    }
+
+    .title{
+        font-size:29px;
+    }
+
+    .subtitle{
+        font-size:12px;
+    }
+
+    .score-area{
+        font-size:12px;
+
+        padding:10px 14px;
+    }
+
+    #gameArea{
+        height:420px;
+
+        border-radius:22px;
+    }
+
+
+    .letter-section{
+        padding:60px 15px;
+    }
+
+    .envelope{
+        width:240px;
+        height:155px;
+    }
+
+    .envelope-body::before{
+        border-left-width:120px;
+        border-right-width:120px;
+        border-bottom-width:85px;
+    }
+
+    .envelope-body::after{
+        border-left-width:120px;
+        border-right-width:120px;
+        border-top-width:85px;
+    }
+
+    .letter{
+        padding:35px 25px;
+    }
+
+    .letter-text{
+        font-size:20px;
+    }
+
+
+    .cat-surprise{
+        height:560px;
+    }
+
+    .surprise-text{
+        top:25px;
+    }
+
+    .surprise-text h2{
+        font-size:25px;
+    }
+
+    .surprise-text p{
+        font-size:13px;
+    }
+
+    .surprise-cats{
+        width:100%;
+
+        max-width:560px;
+
+        height:360px;
+
+        bottom:105px;
+    }
+
+    .surprise-cat{
+        width:48%;
+    }
+
+    .gift-box{
+        width:210px;
+
+        height:165px;
+
+        bottom:40px;
+    }
+
+    .gift-lid{
+        width:226px;
+
+        left:-8px;
+    }
+
+    .cat-surprise.opened .gift-lid{
+        top:-15px;
+
+        transform:
+            rotate(-3deg)
+            translate(-4px,-15px);
+    }
+
+    .gift-bow{
+        transform-origin:
+            center bottom;
+    }
+
+    .cat-surprise.opened .gift-bow{
+        transform:
+            translateX(-50%)
+            translateY(-48px)
+            rotate(-3deg);
+    }
+
+
+    .memories{
+        padding:70px 15px;
+
+        contain-intrinsic-size:
+            900px 1600px;
+    }
+
+    .section-title{
+        margin-bottom:35px;
+    }
+
+    .section-title h2{
+        font-size:45px;
+    }
+
+    .photos{
+        grid-template-columns:1fr;
+
+        gap:15px;
+    }
+
+    .photo{
+        content-visibility:auto;
+
+        contain-intrinsic-size:
+            360px 450px;
+    }
+
+
+    .final{
+        padding:70px 20px;
+    }
+
+    .final h2{
+        font-size:55px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:
+            clamp(
+                53px,
+                16.5vw,
+                64px
+            );
+    }
+
+    .hero-happy{
+        letter-spacing:4px;
+    }
+
+    .hero-name{
+        font-size:10px;
+
+        letter-spacing:2.5px;
+    }
+
+    #gameArea{
+        height:390px;
+    }
+
+    .title{
+        font-size:27px;
+    }
+
+    .heart{
+        font-size:32px;
+    }
+
+    .cake{
+        transform:scale(.76);
+    }
+
+    .letter{
+        padding:30px 20px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.001ms!important;
+
+        animation-iteration-count:1!important;
+
+        transition-duration:.001ms!important;
+    }
+}
+
+
+/* =========================================================
+   SCROLL PERFORMANCE
+========================================================= */
+
+.is-scrolling .photo img{
+    transition:none!important;
+}
+
+.is-scrolling .heart{
+    animation:none!important;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<canvas
+    id="heartCanvas"
+    aria-hidden="true">
+</canvas>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-text">
+            A little something, made for you
+        </div>
+
+        <h1>
+
+            <span class="hero-happy">
+                Happy
+            </span>
+
+            <span class="hero-birthday">
+                Birthday
+            </span>
+
+            <span class="hero-name">
+                Agiesta Putri Pertiwi
+            </span>
+
+        </h1>
+
+        <div class="hero-divider">
+            <span>♥</span>
+        </div>
+
+        <p class="hero-description">
+
+            Ada sedikit sesuatu yang ingin aku sampaikan,
+            bukan lewat pesan singkat,
+            bukan lewat kata-kata biasa,
+            tapi lewat sebuah surat kecil
+            yang aku buat khusus untuk kamu.
+
+        </p>
+
+        <div class="scroll-hint">
+            ↓ &nbsp; scroll slowly &nbsp; ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BIRTHDAY
+===================================================== -->
+
+<section class="birthday-section">
+
+
+    <!-- CAKE -->
+
+    <div class="cake-container">
+
+        <h2>
+            Make a Wish dulu sebelum dimatikan lilinnya 🎂
+        </h2>
+
+        <p>
+            Tekan lilinnya untuk mematikan ✨
+        </p>
+
+
+        <div class="cake">
+
+            <div class="candles">
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="candle-stick"></div>
+                </div>
+
+            </div>
+
+
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+
+        </div>
+
+
+        <p
+            id="cakeMessage"
+            class="cake-message">
+            Make a wish first... 🤍
+        </p>
+
+    </div>
+
+
+    <!-- SCRATCH -->
+
+    <div class="scratch-section">
+
+        <h2>
+            A little surprise for you 💌
+        </h2>
+
+        <p>
+            Scratch the card to reveal your message
+        </p>
+
+
+        <div class="scratch-card">
+
+            <div class="hidden-message">
+
+                <span>❤️</span>
+
+                <h3>
+                    I LOVE YOU
+                </h3>
+
+                <p>
+                    Thank you for being part of my life.
+                    I hope this birthday brings you
+                    everything you've ever wished for.
+                </p>
+
+            </div>
+
+            <canvas id="scratchCanvas"></canvas>
+
+        </div>
+
+
+        <p class="scratch-hint">
+            ✨ Keep scratching...
+        </p>
+
+    </div>
+
+
+    <!-- GAME -->
+
+    <div class="game-wrapper">
+
+        <div class="game-card">
+
+            <h1 class="title">
+                Catch My Heart ❤️
+            </h1>
+
+            <p class="subtitle">
+                Tangkap semua hati sebelum waktunya habis.
+            </p>
+
+
+            <div class="score-area">
+
+                <span>
+                    ❤️ Hati:
+                    <strong id="score">0</strong>/15
+                </span>
+
+                <span>
+                    ⏱️ Waktu:
+                    <strong id="timer">20</strong>
+                </span>
+
+            </div>
+
+
+            <div id="gameArea">
+
+                <div
+                    class="start-screen"
+                    id="startScreen">
+
+                    <div class="start-heart">
+                        ❤️
+                    </div>
+
+                    <h2>
+                        Ada sedikit permainan untukmu...
+                    </h2>
+
+                    <p>
+                        Katanya kalau kamu bisa menangkap semua hati di sini,
+                        kamu berhak mendapatkan sesuatu yang spesial. 🤍
+                    </p>
+
+                    <button onclick="startGame()">
+                        Mulai Game 💕
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="result"
+                    id="resultScreen">
+
+                    <div class="big-heart">
+                        💗
+                    </div>
+
+                    <h2 id="resultTitle">
+                        Kamu berhasil!
+                    </h2>
+
+                    <p id="resultText">
+                        Ternyata semua hati ini memang cocoknya jatuh ke kamu.
+                    </p>
+
+                    <button onclick="startGame()">
+                        Main Lagi ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <p class="success-message">
+                Psst... ada kejutan setelah kamu berhasil 😉
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="backgroundMusic"
+    loop
+    preload="none">
+
+    <source
+        src="hbd.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- =====================================================
+     LETTER
+===================================================== -->
+
+<section class="letter-section">
+
+    <div class="letter-container">
+
+
+        <div class="envelope-wrapper">
+
+            <div
+                class="envelope"
+                id="envelope"
+                onclick="openLetter()">
+
+                <div class="envelope-body"></div>
+
+                <div class="seal">
+                    ♥
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="letter"
+            id="letter">
+
+            <div class="letter-date">
+                August 17, 2026
+            </div>
+
+
+            <h2>
+                To my
+                <span>
+                    favorite person.
+                </span>
+            </h2>
+
+
+            <div class="letter-text">
+
+                <p>
+                    Selamat Ulang tahun yang ke 23 yaa Sayang 💖
+                </p>
+
+                <p>
+                    Selamat ulang tahun buat kamu yang selalu punya tempat spesial
+                    di hati aku. Semoga di umur 23 ini, kamu makin bahagia, makin kuat,
+                    dan semua hal baik yang kamu harapkan pelan-pelan datang ke kamu.
+                </p>
+
+                <p>
+                    Aku mungkin nggak selalu bisa ngasih hal yang sempurna, tapi aku
+                    selalu berharap bisa jadi salah satu alasan kamu tersenyum setiap
+                    harinya. Makasih ya, udah hadir dan jadi bagian dari hidup aku.
+                    Aku senang banget bisa kenal, sayang, dan tumbuh bareng kamu sampai
+                    sejauh ini.
+                </p>
+
+                <p>
+                    Semoga kita masih punya banyak cerita yang bisa dibuat bareng,
+                    banyak tempat yang bisa didatangi, banyak tawa yang bisa dibagi,
+                    dan tentunya banyak ulang tahun kamu yang bisa aku rayain bareng kamu.
+                </p>
+
+                <p>
+                    Sekali lagi, selamat ulang tahun ke-23, sayang. ❤️
+                    Semoga kamu selalu dikelilingi hal-hal baik, dan semoga aku masih
+                    jadi orang yang bisa nemenin kamu di banyak ulang tahun berikutnya.
+                </p>
+
+                <p>
+                    I love you.
+                    <br>
+                    More than words can ever explain.
+                </p>
+
+            </div>
+
+
+            <div class="signature">
+
+                <div class="signature-text">
+                    With all my love,
+                </div>
+
+                <div class="signature-small">
+                    your favorite person ♥
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CAT SURPRISE
+===================================================== -->
+
+<section
+    class="cat-surprise"
+    id="catSurprise">
+
+
+    <div class="surprise-hearts">
+
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+
+    </div>
+
+
+    <div class="surprise-cats">
+
+        <div
+            class="surprise-cat surprise-cat-left">
+
+            <img
+                src="cat-left.png"
+                alt="Kucing kiri"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+
+        <div
+            class="surprise-cat surprise-cat-right">
+
+            <img
+                src="cat-right.png"
+                alt="Kucing kanan"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="gift-box"
+        id="giftBox"
+        onclick="openCatGift()">
+
+        <div class="gift-lid"></div>
+
+
+        <div class="gift-body">
+
+            <div class="gift-ribbon"></div>
+
+        </div>
+
+
+        <div class="gift-bow">
+
+            <span class="bow-left"></span>
+
+            <span class="bow-right"></span>
+
+            <span class="bow-center"></span>
+
+        </div>
+
+
+        <div class="gift-hint">
+            klik 🎁
+        </div>
+
+    </div>
+
+
+    <div
+        class="surprise-text"
+        id="surpriseText">
+
+        <h2>
+            A little surprise ♡
+        </h2>
+
+        <p>
+            klik hadiahnya
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section class="memories">
+
+    <div class="section-title">
+
+        <small>
+            little memories
+        </small>
+
+        <h2>
+            Our Moments
+        </h2>
+
+    </div>
+
+
+    <div class="photos">
+
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/zTTTndjC/Whats-App-Image-2026-08-13-at-21-24-28-2.jpg"
+                alt="Our memory 1"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/zWcTt5Lg/Chat-GPT-Image-Aug-13-2026-09-43-33-PM.png"
+                alt="Our memory 2"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/23KDYRbm/Chat-GPT-Image-Aug-13-2026-09-38-50-PM.png"
+                alt="Our memory 3"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/TBr2DK53/gambar-1-1143x1376.jpg"
+                alt="Our memory 4"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/HDtzm0Bf/gambar-2-1143x1376.jpg"
+                alt="Our memory 5"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://i.ibb.co.com/ZRVpR1gK/gambar-3-1143x1376.jpg"
+                alt="Our memory 6"
+                loading="lazy"
+                decoding="async">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+    <div class="final-content">
+
+        <div class="final-heart">
+            ♥
+        </div>
+
+        <h2>
+            Forever
+            <br>
+            grateful for you.
+        </h2>
+
+        <p>
+            Semoga ulang tahun ini menjadi awal dari satu tahun penuh kebahagiaan,
+            tawa, mimpi yang tercapai, dan banyak cerita baru untuk kita.
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="footer">
+    MADE WITH LOVE ♥
+</div>
+
+
+<script>
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+function openLetter(){
+
+    const envelope =
+        document.getElementById("envelope");
+
+    const letter =
+        document.getElementById("letter");
+
+
+    if(
+        envelope.classList.contains("open")
+    ){
+        return;
+    }
+
+
+    envelope.classList.add("open");
+
+
+    setTimeout(()=>{
+
+        letter.classList.add("show");
+
+        letter.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    },550);
+
+}
+
+
+/* =========================================================
+   FLOATING HEART CANVAS
+========================================================= */
+
+(()=>{
+
+    const canvas =
+        document.getElementById("heartCanvas");
+
+    const ctx =
+        canvas.getContext("2d",{
+            alpha:true
+        });
+
+
+    let hearts=[];
+
+    let width=0;
+    let height=0;
+
+    let dpr=1;
+
+    let lastTime=0;
+
+    let spawnTimer=0;
+
+    let running=true;
+
+    let rafId=0;
+
+
+    const mobile =
+        window.matchMedia(
+            "(max-width:700px)"
+        ).matches;
+
+
+    const MAX_HEARTS =
+        mobile ? 7 : 11;
+
+
+    const SPAWN_INTERVAL =
+        mobile ? 1200 : 850;
+
+
+    function resize(){
+
+        width=window.innerWidth;
+
+        height=window.innerHeight;
+
+
+        dpr=Math.min(
+            window.devicePixelRatio || 1,
+            1.25
+        );
+
+
+        canvas.width =
+            Math.floor(width*dpr);
+
+        canvas.height =
+            Math.floor(height*dpr);
+
+
+        canvas.style.width =
+            width+"px";
+
+        canvas.style.height =
+            height+"px";
+
+
+        ctx.setTransform(
+            dpr,
+            0,
+            0,
+            dpr,
+            0,
+            0
+        );
+
+    }
+
+
+    function addHeart(
+        fromBottom=true
+    ){
+
+        if(
+            hearts.length>=MAX_HEARTS
+        ){
+            return;
+        }
+
+
+        const size =
+            mobile
+            ? 9+Math.random()*8
+            : 10+Math.random()*11;
+
+
+        hearts.push({
+
+            x:
+                Math.random()*width,
+
+            y:
+                fromBottom
+                ? height+size
+                : Math.random()*height,
+
+            size,
+
+            speed:
+                mobile
+                ? 15+Math.random()*14
+                : 20+Math.random()*18,
+
+            rotation:
+                Math.random()*Math.PI*2,
+
+            rotationSpeed:
+                (Math.random()-.5)*.25,
+
+            opacity:0,
+
+            life:0,
+
+            maxLife:
+                mobile
+                ? 12+Math.random()*3
+                : 11+Math.random()*4,
+
+            drift:
+                (Math.random()-.5)*
+                (mobile?7:10),
+
+            phase:
+                Math.random()*Math.PI*2
+
+        });
+
+    }
+
+
+    function drawHeart(
+        x,
+        y,
+        size,
+        rotation,
+        opacity
+    ){
+
+        ctx.save();
+
+
+        ctx.translate(
+            x,
+            y
+        );
+
+
+        ctx.rotate(rotation);
+
+
+        ctx.globalAlpha =
+            opacity;
+
+
+        ctx.fillStyle =
+            "rgba(155,83,83,.34)";
+
+
+        const s =
+            size/18;
+
+
+        ctx.beginPath();
+
+
+        ctx.moveTo(
+            0,
+            6*s
+        );
+
+
+        ctx.bezierCurveTo(
+            -14*s,
+            -3*s,
+            -9*s,
+            -12*s,
+            -3*s,
+            -12*s
+        );
+
+
+        ctx.bezierCurveTo(
+            0,
+            -12*s,
+            2*s,
+            -9*s,
+            0,
+            -5*s
+        );
+
+
+        ctx.bezierCurveTo(
+            2*s,
+            -9*s,
+            5*s,
+            -12*s,
+            8*s,
+            -12*s
+        );
+
+
+        ctx.bezierCurveTo(
+            14*s,
+            -12*s,
+            16*s,
+            -3*s,
+            0,
+            6*s
+        );
+
+
+        ctx.fill();
+
+
+        ctx.restore();
+
+    }
+
+
+    function animate(time){
+
+        if(!running){
+            rafId=0;
+            return;
+        }
+
+
+        if(!lastTime){
+            lastTime=time;
+        }
+
+
+        const delta =
+            Math.min(
+                (time-lastTime)/1000,
+                .05
+            );
+
+
+        lastTime=time;
+
+
+        spawnTimer +=
+            delta*1000;
+
+
+        if(
+            spawnTimer>=SPAWN_INTERVAL
+        ){
+
+            spawnTimer=0;
+
+            addHeart(true);
+
+        }
+
+
+        ctx.clearRect(
+            0,
+            0,
+            width,
+            height
+        );
+
+
+        for(
+            let i=hearts.length-1;
+            i>=0;
+            i--
+        ){
+
+            const h=hearts[i];
+
+
+            h.life += delta;
+
+
+            h.y -=
+                h.speed*delta;
+
+
+            h.x +=
+                Math.sin(
+                    h.life*.8+h.phase
+                )*
+                h.drift*
+                delta;
+
+
+            h.rotation +=
+                h.rotationSpeed*
+                delta;
+
+
+            const fadeIn =
+                Math.min(
+                    h.life/1.2,
+                    1
+                );
+
+
+            const fadeOut =
+                Math.min(
+                    Math.max(
+                        (
+                            h.life-
+                            (
+                                h.maxLife-2
+                            )
+                        )/2,
+                        0
+                    ),
+                    1
+                );
+
+
+            h.opacity =
+                fadeIn*
+                (1-fadeOut);
+
+
+            drawHeart(
+                h.x,
+                h.y,
+                h.size,
+                h.rotation,
+                h.opacity
+            );
+
+
+            if(
+                h.y<-40 ||
+                h.life>=h.maxLife
+            ){
+
+                hearts.splice(
+                    i,
+                    1
+                );
+
+            }
+
+        }
+
+
+        rafId =
+            requestAnimationFrame(
+                animate
+            );
+
+    }
+
+
+    function start(){
+
+        if(
+            !rafId
+        ){
+
+            running=true;
+
+            lastTime=
+                performance.now();
+
+            rafId =
+                requestAnimationFrame(
+                    animate
+                );
+
+        }
+
+    }
+
+
+    function stop(){
+
+        running=false;
+
+        if(rafId){
+
+            cancelAnimationFrame(
+                rafId
+            );
+
+            rafId=0;
+
+        }
+
+    }
+
+
+    document.addEventListener(
+        "visibilitychange",
+        ()=>{
+
+            if(document.hidden){
+
+                stop();
+
+            }else{
+
+                start();
+
+            }
+
+        }
+    );
+
+
+    resize();
+
+
+    window.addEventListener(
+        "resize",
+        resize,
+        {
+            passive:true
+        }
+    );
+
+
+    for(
+        let i=0;
+        i<(mobile?3:5);
+        i++
+    ){
+
+        addHeart(false);
+
+    }
+
+
+    start();
+
+})();
+
+
+/* =========================================================
+   CAKE + MUSIC
+========================================================= */
+
+const candles =
+    document.querySelectorAll(
+        ".candle"
+    );
+
+
+const cakeMessage =
+    document.getElementById(
+        "cakeMessage"
+    );
+
+
+const backgroundMusic =
+    document.getElementById(
+        "backgroundMusic"
+    );
+
+
+backgroundMusic.volume=.45;
+
+
+candles.forEach(
+    candle=>{
+
+        candle.addEventListener(
+            "click",
+            ()=>{
+
+                if(
+                    candle.classList.contains(
+                        "blown"
+                    )
+                ){
+                    return;
+                }
+
+
+                candle.classList.add(
+                    "blown"
+                );
+
+
+                const remaining =
+                    document.querySelectorAll(
+                        ".candle:not(.blown)"
+                    ).length;
+
+
+                if(
+                    remaining===0
+                ){
+
+                    cakeMessage.innerHTML =
+                        "Sekarang lanjut scroll lagi 🤍";
+
+
+                    createConfetti();
+
+
+                    backgroundMusic.currentTime=0;
+
+
+                    backgroundMusic
+                        .play()
+                        .catch(()=>{
+                            console.log(
+                                "Browser menunggu interaksi user untuk audio."
+                            );
+                        });
+
+                }else{
+
+                    cakeMessage.innerHTML =
+                        `${remaining} candle${remaining>1?"s":""} left... 🎂`;
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   SCRATCH CARD
+========================================================= */
+
+const scratchCanvas =
+    document.getElementById(
+        "scratchCanvas"
+    );
+
+
+const scratchCtx =
+    scratchCanvas.getContext(
+        "2d",
+        {
+            willReadFrequently:true
+        }
+    );
+
+
+let scratching=false;
+
+let scratchCheckPending=false;
+
+
+function setupCanvas(){
+
+    const rect =
+        scratchCanvas.getBoundingClientRect();
+
+
+    const dpr =
+        Math.min(
+            window.devicePixelRatio||1,
+            1.25
+        );
+
+
+    scratchCanvas.width =
+        Math.floor(
+            rect.width*dpr
+        );
+
+
+    scratchCanvas.height =
+        Math.floor(
+            rect.height*dpr
+        );
+
+
+    scratchCtx.setTransform(
+        dpr,
+        0,
+        0,
+        dpr,
+        0,
+        0
+    );
+
+
+    scratchCtx.globalCompositeOperation =
+        "source-over";
+
+
+    scratchCtx.fillStyle =
+        "#d99aa5";
+
+
+    scratchCtx.fillRect(
+        0,
+        0,
+        rect.width,
+        rect.height
+    );
+
+
+    scratchCtx.fillStyle =
+        "rgba(255,255,255,.15)";
+
+
+    for(
+        let i=0;
+        i<70;
+        i++
+    ){
+
+        const x =
+            Math.random()*rect.width;
+
+        const y =
+            Math.random()*rect.height;
+
+
+        scratchCtx.beginPath();
+
+        scratchCtx.arc(
+            x,
+            y,
+            2,
+            0,
+            Math.PI*2
+        );
+
+        scratchCtx.fill();
+
+    }
+
+
+    scratchCtx.fillStyle="#fff";
+
+    scratchCtx.font =
+        "bold 18px Georgia";
+
+    scratchCtx.textAlign="center";
+
+
+    scratchCtx.fillText(
+        "SCRATCH ME ❤️",
+        rect.width/2,
+        rect.height/2
+    );
+
+}
+
+
+setupCanvas();
+
+
+function scratch(e){
+
+    if(!scratching){
+        return;
+    }
+
+
+    const rect =
+        scratchCanvas.getBoundingClientRect();
+
+
+    const point =
+        e.touches
+        ? e.touches[0]
+        : e;
+
+
+    const x =
+        point.clientX-rect.left;
+
+
+    const y =
+        point.clientY-rect.top;
+
+
+    scratchCtx.globalCompositeOperation =
+        "destination-out";
+
+
+    scratchCtx.beginPath();
+
+
+    scratchCtx.arc(
+        x,
+        y,
+        22,
+        0,
+        Math.PI*2
+    );
+
+
+    scratchCtx.fill();
+
+
+    if(
+        !scratchCheckPending
+    ){
+
+        scratchCheckPending=true;
+
+
+        setTimeout(
+            ()=>{
+
+                scratchCheckPending=false;
+
+                checkScratchPercentage();
+
+            },
+            100
+        );
+
+    }
+
+}
+
+
+scratchCanvas.addEventListener(
+    "mousedown",
+    ()=>{
+        scratching=true;
+    }
+);
+
+
+scratchCanvas.addEventListener(
+    "mouseup",
+    ()=>{
+        scratching=false;
+    }
+);
+
+
+scratchCanvas.addEventListener(
+    "mouseleave",
+    ()=>{
+        scratching=false;
+    }
+);
+
+
+scratchCanvas.addEventListener(
+    "mousemove",
+    scratch
+);
+
+
+scratchCanvas.addEventListener(
+    "touchstart",
+    e=>{
+
+        e.preventDefault();
+
+        scratching=true;
+
+        scratch(e);
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+scratchCanvas.addEventListener(
+    "touchmove",
+    e=>{
+
+        e.preventDefault();
+
+        scratch(e);
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+scratchCanvas.addEventListener(
+    "touchend",
+    ()=>{
+        scratching=false;
+    }
+);
+
+
+function checkScratchPercentage(){
+
+    if(
+        scratchCanvas.style.display==="none"
+    ){
+        return;
+    }
+
+
+    const data =
+        scratchCtx.getImageData(
+            0,
+            0,
+            scratchCanvas.width,
+            scratchCanvas.height
+        ).data;
+
+
+    let transparent=0;
+
+
+    const step=4*4;
+
+
+    for(
+        let i=3;
+        i<data.length;
+        i+=step
+    ){
+
+        if(
+            data[i]===0
+        ){
+            transparent++;
+        }
+
+    }
+
+
+    const totalSamples =
+        Math.ceil(
+            data.length/step
+        );
+
+
+    const percentage =
+        (
+            transparent/
+            totalSamples
+        )*100;
+
+
+    if(
+        percentage>55
+    ){
+
+        scratchCanvas.style.transition =
+            "opacity .6s";
+
+        scratchCanvas.style.opacity="0";
+
+
+        setTimeout(
+            ()=>{
+
+                scratchCanvas.style.display =
+                    "none";
+
+            },
+            600
+        );
+
+
+        document.querySelector(
+            ".scratch-hint"
+        ).innerHTML =
+            "You found the secret message! 💗";
+
+    }
+
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+function createConfetti(){
+
+    const mobile =
+        window.matchMedia(
+            "(max-width:700px)"
+        ).matches;
+
+
+    const count =
+        mobile ? 22 : 35;
+
+
+    for(
+        let i=0;
+        i<count;
+        i++
+    ){
+
+        const confetti =
+            document.createElement(
+                "div"
+            );
+
+
+        confetti.textContent="♥";
+
+
+        Object.assign(
+            confetti.style,
+            {
+
+                position:"fixed",
+
+                left:
+                    Math.random()*100+
+                    "vw",
+
+                top:"-20px",
+
+                fontSize:
+                    (
+                        Math.random()*12+
+                        9
+                    )+
+                    "px",
+
+                zIndex:"9999",
+
+                pointerEvents:"none",
+
+                willChange:
+                    "transform,opacity"
+
+            }
+        );
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        const animation =
+            confetti.animate(
+
+                [
+
+                    {
+                        transform:
+                            "translate3d(0,0,0) rotate(0deg)",
+
+                        opacity:1
+                    },
+
+                    {
+                        transform:
+                            `translate3d(0,110vh,0) rotate(${Math.random()*720}deg)`,
+
+                        opacity:0
+                    }
+
+                ],
+
+                {
+
+                    duration:
+                        2000+
+                        Math.random()*1600,
+
+                    easing:"ease-out"
+
+                }
+
+            );
+
+
+        animation.onfinish =
+            ()=>{
+                confetti.remove();
+            };
+
+    }
+
+}
+
+
+/* =========================================================
+   CAT GIFT
+========================================================= */
+
+function openCatGift(){
+
+    const surprise =
+        document.getElementById(
+            "catSurprise"
+        );
+
+
+    const gift =
+        document.getElementById(
+            "giftBox"
+        );
+
+
+    const title =
+        document.querySelector(
+            "#surpriseText h2"
+        );
+
+
+    const subtitle =
+        document.querySelector(
+            "#surpriseText p"
+        );
+
+
+    if(
+        surprise.classList.contains(
+            "opened"
+        )
+    ){
+        return;
+    }
+
+
+    surprise.classList.add(
+        "opened"
+    );
+
+
+    gift.style.pointerEvents =
+        "none";
+
+
+    setTimeout(
+        ()=>{
+
+            title.textContent =
+                "Surprise! 💗";
+
+
+            subtitle.textContent =
+                "Hari spesial kamu nggak lengkap tanpa Bocah & Acin yang ikut merayakannya bersamamu ♡";
+
+        },
+        650
+    );
+
+}
+
+
+/* =========================================================
+   HEART GAME
+========================================================= */
+
+let score=0;
+
+let timeLeft=20;
+
+let gameRunning=false;
+
+let timerInterval=null;
+
+let heartInterval=null;
+
+
+const targetScore=15;
+
+
+const gameArea =
+    document.getElementById(
+        "gameArea"
+    );
+
+
+const scoreElement =
+    document.getElementById(
+        "score"
+    );
+
+
+const timerElement =
+    document.getElementById(
+        "timer"
+    );
+
+
+const startScreen =
+    document.getElementById(
+        "startScreen"
+    );
+
+
+const resultScreen =
+    document.getElementById(
+        "resultScreen"
+    );
+
+
+const resultTitle =
+    document.getElementById(
+        "resultTitle"
+    );
+
+
+const resultText =
+    document.getElementById(
+        "resultText"
+    );
+
+
+function startGame(){
+
+    score=0;
+
+    timeLeft=20;
+
+    gameRunning=true;
+
+
+    scoreElement.textContent=score;
+
+    timerElement.textContent=timeLeft;
+
+
+    startScreen.style.display =
+        "none";
+
+
+    resultScreen.classList.remove(
+        "show"
+    );
+
+
+    document
+        .querySelectorAll(
+            "#gameArea .heart"
+        )
+        .forEach(
+            h=>h.remove()
+        );
+
+
+    clearInterval(
+        timerInterval
+    );
+
+
+    clearInterval(
+        heartInterval
+    );
+
+
+    timerInterval =
+        setInterval(
+            ()=>{
+
+                if(!gameRunning){
+                    return;
+                }
+
+
+                timeLeft--;
+
+                timerElement.textContent =
+                    timeLeft;
+
+
+                if(
+                    timeLeft<=0
+                ){
+
+                    endGame(false);
+
+                }
+
+            },
+            1000
+        );
+
+
+    heartInterval =
+        setInterval(
+            ()=>{
+
+                if(gameRunning){
+                    createHeart();
+                }
+
+            },
+            700
+        );
+
+
+    createHeart();
+
+}
+
+
+function createHeart(){
+
+    if(!gameRunning){
+        return;
+    }
+
+
+    const heart =
+        document.createElement(
+            "div"
+        );
+
+
+    heart.className="heart";
+
+
+    const heartTypes=[
+        "❤️",
+        "💗",
+        "💖",
+        "💕",
+        "💓"
+    ];
+
+
+    heart.textContent =
+        heartTypes[
+            Math.floor(
+                Math.random()*
+                heartTypes.length
+            )
+        ];
+
+
+    const areaWidth =
+        gameArea.clientWidth;
+
+
+    const areaHeight =
+        gameArea.clientHeight;
+
+
+    const maxX =
+        Math.max(
+            0,
+            areaWidth-55
+        );
+
+
+    const maxY =
+        Math.max(
+            0,
+            areaHeight-70
+        );
+
+
+    heart.style.left =
+        Math.random()*maxX+
+        "px";
+
+
+    heart.style.top =
+        Math.random()*maxY+
+        "px";
+
+
+    heart.addEventListener(
+        "click",
+        function(e){
+
+            if(!gameRunning){
+                return;
+            }
+
+
+            score++;
+
+
+            scoreElement.textContent =
+                score;
+
+
+            createParticles(
+                e.clientX,
+                e.clientY
+            );
+
+
+            heart.remove();
+
+
+            if(
+                score>=targetScore
+            ){
+
+                endGame(true);
+
+            }
+
+        }
+    );
+
+
+    gameArea.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        ()=>{
+
+            if(
+                heart.parentNode
+            ){
+
+                heart.remove();
+
+            }
+
+        },
+        1800
+    );
+
+}
+
+
+function createParticles(
+    x,
+    y
+){
+
+    const particles=[
+        "💕",
+        "✨",
+        "💗",
+        "♡"
+    ];
+
+
+    const rect =
+        gameArea.getBoundingClientRect();
+
+
+    const count =
+        window.innerWidth<=700
+        ? 4
+        : 6;
+
+
+    for(
+        let i=0;
+        i<count;
+        i++
+    ){
+
+        const particle =
+            document.createElement(
+                "div"
+            );
+
+
+        particle.className =
+            "particle";
+
+
+        particle.textContent =
+            particles[
+                Math.floor(
+                    Math.random()*
+                    particles.length
+                )
+            ];
+
+
+        particle.style.left =
+            x-rect.left+
+            "px";
+
+
+        particle.style.top =
+            y-rect.top+
+            "px";
+
+
+        particle.style.setProperty(
+            "--x",
+            (
+                (Math.random()-.5)*
+                80
+            )+
+            "px"
+        );
+
+
+        particle.style.setProperty(
+            "--y",
+            (
+                (Math.random()-.5)*
+                80
+            )+
+            "px"
+        );
+
+
+        gameArea.appendChild(
+            particle
+        );
+
+
+        setTimeout(
+            ()=>{
+                particle.remove();
+            },
+            700
+        );
+
+    }
+
+}
+
+
+function endGame(
+    success
+){
+
+    gameRunning=false;
+
+
+    clearInterval(
+        timerInterval
+    );
+
+
+    clearInterval(
+        heartInterval
+    );
+
+
+    document
+        .querySelectorAll(
+            "#gameArea .heart"
+        )
+        .forEach(
+            h=>h.remove()
+        );
+
+
+    if(success){
+
+        resultTitle.textContent =
+            "Kamu berhasil menangkap semuanya! 💗";
+
+
+        resultText.innerHTML =
+            `Dari sekian banyak hati yang ada di dunia,<br>
+             entah kenapa hatiku selalu memilih kamu.<br><br>
+             <strong>Happy Birthday, sayang. ❤️</strong>`;
+
+    }else{
+
+        resultTitle.textContent =
+            "Waktunya habis 😆";
+
+
+        resultText.innerHTML =
+            `Kamu berhasil menangkap ${score} hati.<br><br>
+             Tapi tenang... ada satu hati yang nggak perlu kamu tangkap,<br>
+             karena dari awal memang sudah jadi milik kamu. ❤️`;
+
+    }
+
+
+    resultScreen.classList.add(
+        "show"
+    );
+
+}
+
+
+/* =========================================================
+   SCROLL PERFORMANCE
+========================================================= */
+
+let scrollStopTimer=null;
+
+
+window.addEventListener(
+    "scroll",
+    ()=>{
+
+        document.body.classList.add(
+            "is-scrolling"
+        );
+
+
+        clearTimeout(
+            scrollStopTimer
+        );
+
+
+        scrollStopTimer =
+            setTimeout(
+                ()=>{
+
+                    document.body.classList.remove(
+                        "is-scrolling"
+                    );
+
+                },
+                120
+            );
+
+    },
+    {
+        passive:true
+    }
+);
+
+</script>
+
+</body>
+</html>
